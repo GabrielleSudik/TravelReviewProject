@@ -24,7 +24,7 @@ namespace TravelReviewProject
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-cerulean.css",
+                      "~/Content/bootstrap-cyborg.css",
                       "~/Content/site.css"));
         }
     }

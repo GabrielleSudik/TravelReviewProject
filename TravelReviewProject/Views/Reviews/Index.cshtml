@@ -4,60 +4,70 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<head>
+    <script src="sorttable.js"></script>
+</head>
+
+<h2>All Our Reviews</h2>
+
+@*<table class="table">*@
+    <table class="sortable">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost.EstimatedCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destination.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating.UserRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReviewTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserReview)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cost.EstimatedCost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Destination.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating.UserRating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReviewTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserReview)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+
+
+        }
+
+    </table>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    Want to write your own review?
+    @Html.ActionLink("Write it here!", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Cost.EstimatedCost)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Destination.City)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rating.UserRating)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReviewTitle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserReview)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Date)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cost.EstimatedCost)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Destination.City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating.UserRating)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReviewTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserReview)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
-</table>
