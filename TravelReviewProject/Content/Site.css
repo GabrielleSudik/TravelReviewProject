@@ -1,12 +1,21 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Josefin Slab', serif;
+    /*font-family: 'Special Elite', cursive;*/
+    /*font-family: 'Courier New';*/
+    /*font-size: 120%;*/
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+h1, h2 {
+    font-family: 'Special Elite', cursive;
+
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +31,11 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+/* the following info was provided by google fonts:
+
+    font-family: 'Special Elite', cursive; (that's the tyoewriter one)
+    font-family: 'Oswald', sans-serif; (that's the plainish one, kinda dense)
+    font-family: 'Josefin Slab', serif; (plainish, slightly spred out)
+*/

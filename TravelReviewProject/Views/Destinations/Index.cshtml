@@ -4,12 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Places We've Been</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<h4>Sort by destination, country or language!</h4>
+<table class="table sortable">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.City)
@@ -43,3 +41,7 @@
 }
 
 </table>
+
+<p>
+    @Html.ActionLink("Make our world bigger by adding new destinations", "Create")
+</p>
