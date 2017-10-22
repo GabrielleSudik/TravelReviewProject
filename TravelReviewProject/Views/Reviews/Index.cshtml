@@ -5,7 +5,7 @@
 }
 
 <h2>Existing Reviews</h2>
-<h4>Sort by Destination or Rating</h4>
+<h4>Sort by destination or rating</h4>
 
 @*can you make review title UNsortable?*@
 
@@ -19,9 +19,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Rating.UserRating)
             </th>
-            <th>
+
+            @*try: taking out Review in table header*@
+
+            @*<th>
                 @Html.DisplayNameFor(model => model.ReviewTitle)
-            </th>
+            </th>*@
 
             <th></th>
         </tr>
@@ -36,15 +39,25 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Rating.UserRating)
                 </td>
-                <td>
+
+                @*ADD: make this column the hyperlink. cut and paste from below I guess?*@
+                @*You would up doing the reverse.*@
+
+                @*<td>
                     @Html.DisplayFor(modelItem => item.ReviewTitle)
-                </td>
+                </td>*@
 
-                @*Can you make the hyperlinks the item.ReviewTitle?*@
+                @*Can you make the hyperlinks the item.ReviewTitle? YES*@
 
                 <td>
-                    @Html.ActionLink("Read the full review!", "Details", new { id = item.ID }) |
+                    @*DO: remove generic link to full review, keep specialized link*@
+                    @*@Html.ActionLink("Read the full review!", "Details", new { id = item.ID }) |*@
 
+                    @*the following line works (so far) can you remove first, unlinked mention?*@
+                    @Html.ActionLink(item.ReviewTitle, "Details", new { id = item.ID })
+                </td>
+                <td>
+                    @*can you put those other two in the own columns? probably with their own td divisions? YES*@
                     @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.ID })
                 </td>
@@ -55,14 +68,14 @@
 
     </table>
 
-<p>
-    Want to write your own review?
-    @Html.ActionLink("Write it here!", "Create")
+<h4  class="followMe">
+    @*Want to write your own review?*@
+    @Html.ActionLink("Add your own review!", "Create")
 
     @*TRY THIS. DELETE IF NOT WORKING*@
 
-    Need to add a new destination?
-    @Html.ActionLink("Add one here!", "Create", "Destinations")
+    @*Need to add a new destination?*@
+    @Html.ActionLink("Add a new destination!", "Create", "Destinations")
 
-    @*FLIP THOSE LAST TWO if it doesn't work*@
-</p>
+    @*FLIP THOSE LAST TWO if it doesn't work. IT WORKS.*@
+</h4>

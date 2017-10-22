@@ -11,7 +11,7 @@ namespace TravelReviewProject.Models
     {
         [Key]
         public int ID { get; set; }
-        [DisplayName("City or Destination")]
+        [DisplayName("Destination")]
         public string City { get; set; }
         public string Country { get; set; }
         public string Language { get; set; }
