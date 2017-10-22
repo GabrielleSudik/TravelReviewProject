@@ -1,10 +1,31 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    font-family: 'Josefin Slab', serif;
-    /*font-family: 'Special Elite', cursive;*/
-    /*font-family: 'Courier New';*/
+    /*font-family: 'Josefin Slab', serif;*/
+    font-family: 'Courier New';
     /*font-size: 120%;*/
+    background-color: #ff7400;  /*medium orange*/
+    color: #512500; /*rgb(117, 53, 0);*/ /*brown*/
+}
+
+.navbar{
+    background-color: #512500;
+    color: #ff7400;
+}
+
+.navbar-toggle{
+    /*might need something here, maybe just copy .navbar*/
+        background-color: #512500;
+    color: #ff7400;
+}
+
+.jumbotron{
+    background-color: #512500;
+    color: #FFBD86;
+}
+
+.jumbotron.h1 /* or is it the reverse? or something else?*/ {
+    color: #ff7400;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -15,6 +36,7 @@
 
 h1, h2 {
     font-family: 'Special Elite', cursive;
+    color: #FFBD86; /* very light orange*/
 
 }
 
