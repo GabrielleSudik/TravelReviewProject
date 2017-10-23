@@ -9,9 +9,13 @@
 <h2>"@Html.DisplayFor(model => model.ReviewTitle)"</h2>
 <h2>@Html.DisplayFor(model => model.Rating.UserRating)</h2>
 <div>
-    @*<h4>Review</h4>*@
-    <hr />
-    <dl class="dl-horizontal">
+    <div>
+        <hr />
+        <h4>@Html.DisplayFor(model => model.UserReview)</h4>
+        <hr />
+    </div>
+
+    <dl @*class="dl-horizontal"*@ class="dl-vertical font120">
         @*<dt>
             @Html.DisplayNameFor(model => model.Destination.City)
         </dt>
@@ -26,18 +30,25 @@
             @Html.DisplayFor(model => model.Rating.UserRating)
         </dd>*@
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.ReviewTitle)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.ReviewTitle)
-        </dd>
+        </dd>*@
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.UserReview)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.UserReview)
+        </dd>*@
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
         </dd>
 
         <dt>
@@ -47,16 +58,10 @@
             @Html.DisplayFor(model => model.Cost.EstimatedCost)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
-
     </dl>
 </div>
-<p>
+<hr/>
+<p class="followMe">
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to All Reviews", "Index")
 </p>

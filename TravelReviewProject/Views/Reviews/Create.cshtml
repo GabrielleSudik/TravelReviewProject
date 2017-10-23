@@ -47,8 +47,8 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.UserReview, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.UserReview, new { htmlAttributes = new { @class = "form-control" } })
+            <div class="col-md-10"> @*ADD LARGER BOX HERE*@
+                @Html.EditorFor(model => model.UserReview, new { htmlAttributes = new { @class = "form-control form-control-tall" } })
                 @Html.ValidationMessageFor(model => model.UserReview, "", new { @class = "text-danger" })
             </div>
         </div>

@@ -1,45 +1,42 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    /*font-family: 'Josefin Slab', serif;*/
     font-family: 'Courier New';
-    /*font-size: 120%;*/
-    background-color: #ff7400;  /*medium orange*/
-    color: #512500; /*rgb(117, 53, 0);*/ /*brown*/
+    background-color: #ff7400; /*medium orange*/
+    color: #512500; /*brown*/
 }
 
-.brownTitle{
-    color: #512500;
+.brownTitle {
+    color: #512500; /*brown*/
     text-align: center;
 }
 
-.navbar{
-    background-color: #512500;
-    color: #ff7400;
-    font-size: 120%
+.navbar {
+    background-color: #512500; /*brown*/
+    color: #ff7400; /*medium orange*/
+    font-size: 120%;
 }
 
-.navbar-toggle{
+.navbar-toggle {
     /*might need something here, maybe just copy .navbar*/
-        background-color: #512500;
-    color: #ff7400;
+    background-color: #512500; /*brown*/
+    color: #ff7400; /*medium orange*/
 }
 
-a.navbar /*eep how to i name the attributes of links in the navbar? tried several ways, none worked*/
-{
+a.navbar /*eep how to i name the attributes of links in the navbar? tried several ways, none worked*/ {
     color: white;
 }
 
-.jumbotron{
-    background-color: #512500;
-    color: /*#FFBD86*/white;
-            background-image: url('../Images/landscape background.jpg');
+.jumbotron {
+    background-color: #512500; /*brown*/
+    color: /*#FFBD86*/ white;
+    background-image: url('../Images/landscape background.jpg');
 }
 
-    .jumboHeading /* or is it the reverse? or something else?*/ {
-        color: #ff7400;
-        text-align: center;
-    }
+.jumboHeading {
+    color: #ff7400; /*medium orange*/
+    text-align: center;
+}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -47,59 +44,75 @@ a.navbar /*eep how to i name the attributes of links in the navbar? tried severa
     padding-right: 15px;
 }
 
-.threeChoices{
+.threeChoices {
     text-align: center;
 }
 
-#Machu{
-        float: left;
-    padding: 2px 2px 2px 2px; /*play with numbers to get it flush with top and left, margin on rt and bottom*/
-    margin: 2px;
+.sampleReviewPale {
+    background-color: #FFAC67; /*light orange*/
 }
 
-#Portland{
-        float: right;
-    padding: 20px 20px 20px 20px;
-    margin: 20px;
+.sampleReview, .sampleReviewPale{
+    padding: 20px;
+    margin: 0px;
 }
 
-#SriFood{
-        float: left;
-    padding: 20px 20px 20px 20px;
-    margin: 20px;
+#Machu {
+    float: left;
+    padding: 0px ; /*play with numbers to get it flush with top and left, margin on rt and bottom*/
+    margin: 0px 20px 0px 0px;
 }
 
-.table{
-    background-color: #512500;
+#Portland {
+    float: right;
+    margin: 0px 0px 0px 20px;  /*what's better, changing margin or padding?*/
+    padding: 0px ;
+}
+
+#SriFood {
+    float: left;
+    margin: 0px 20px 0px 0px;
+    padding: 0px ;
+}
+
+.table {
+    background-color: #512500; /*brown*/
     color: white;
 }
 
-.tableHeading{
+.tableHeading {
     font-size: 130%;
 }
 
-.tableBody{
+.tableBody {
     background-color: #CD5D00; /*dark orange*/
 }
 
-table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
-    content: " \25B4\25BE" 
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after {
+    content: " \25B4\25BE";
+    /*adds arrows to the sortable tables*/
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: 'Special Elite', cursive;
-    color: /*#FFBD86*/white; /* very light orange*/
-
+    color: white;
+    /*this is what you're using for almost all non-table text*/
 }
 
-.followMe{
+.font120 {
+    font-size: 120%;
+}
+
+.followMe {
     color: white;
     font-family: 'Special Elite', cursive;
-    /*need to make hyperlink text more readable*/
+    font-size: 120%;
+    /*this mostly styles links between pages*/
 }
 
-a{
+a {
     color: white;
+    /*this makes hyperlink text white (except navbar)*/
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -116,26 +129,32 @@ textarea {
     max-width: 280px;
 }
 
-/*DO: make the form input for Review bigger than the rest*/
+/*.form-control-tall {
+    height: 114px;  /*that's 3x regular height
+    word-wrap: break-word;
+    /*this makes input box for review taller than the rest*/
+    /*can't fix some problems with it, though, so removed because it looked silly
+}*/
 
-.btn-primary{
+
+.btn-primary {
     background-color: #C35800; /*darker orange*/
     color: white;
     /*how can i change the hover color?*/
 }
 
-.btn-default{
-        background-color: #512500;
+.btn-default {
+    background-color: #512500; /*brown*/
     color: white;
     /*how can i change the hover color?*/
 }
 
-footer{
+footer {
     font-size: 120%;
 }
 
 
-/* the following info was provided by google fonts. Use as needed.
+/* the following info was provided by google fonts. Use as needed. All are loaded into HEAD.
 
     font-family: 'Special Elite', cursive; (that's the tyoewriter one)
     font-family: 'Oswald', sans-serif; (that's the plainish one, kinda dense)
