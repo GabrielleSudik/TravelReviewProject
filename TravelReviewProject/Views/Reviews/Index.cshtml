@@ -8,9 +8,9 @@
 <h4>Sort by destination or rating</h4>
 
 
-@*<table class="table">*@
-    <table class="table sortable">
-        <tr class="tableHeading"> @*add class to style table heading*@
+
+    <table class="table sortable">  @*columns with headers will be sortable*@
+        <tr class="tableHeading"> @*class to style table heading*@
 
             <th>
                 @Html.DisplayNameFor(model => model.Destination.City)
@@ -19,18 +19,17 @@
                 @Html.DisplayNameFor(model => model.Rating.UserRating)
             </th>
 
-            @*try: taking out Review in table header*@
+            @*try: taking out Review in table header. Result: No sort feature there. Good*@
 
             @*<th>
                 @Html.DisplayNameFor(model => model.ReviewTitle)
             </th>*@
 
-            @*<th></th>*@ @*this TH removed because it gave up/down buttons, not needed*@
         </tr>
 
         @foreach (var item in Model)
         {
-            <tr class="tableBody"> @*add class to style body of table*@
+            <tr class="tableBody"> @*class to style body of table*@
 
                 <td>
                     @Html.DisplayFor(modelItem => item.Destination.City)
@@ -40,23 +39,22 @@
                 </td>
 
                 @*ADD: make this column the hyperlink. cut and paste from below I guess?*@
-                @*You would up doing the reverse.*@
+                @*You wound up doing the reverse.*@
 
                 @*<td>
                     @Html.DisplayFor(modelItem => item.ReviewTitle)
                 </td>*@
 
-                @*Can you make the hyperlinks the item.ReviewTitle? YES*@
+                @*Can you make the hyperlinks the item.ReviewTitle? YES. yay*@
 
                 <td>
-                    @*DO: remove generic link to full review, keep specialized link*@
-                    @*@Html.ActionLink("Read the full review!", "Details", new { id = item.ID }) |*@
-
-                    @*the following line works (so far) can you remove first, unlinked mention?*@
+                    @*the following line works (so far) can you remove first, unlinked mention? YES*@
                     @Html.ActionLink(item.ReviewTitle, "Details", new { id = item.ID })
+
+                    @*@Html.ActionLink("Read the full review!", "Details", new { id = item.ID }) |*@
                 </td>
                 <td>
-                    @*can you put those other two in the own columns? probably with their own td divisions? YES*@
+                    @*"Details" changed to a direct link from Title, above*@
                     @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.ID })
                 </td>
@@ -68,13 +66,9 @@
     </table>
 
 <h4  class="followMe">
-    @*Want to write your own review?*@
+
     @Html.ActionLink("Add your own review!", "Create")
 
-    @*TRY THIS. DELETE IF NOT WORKING*@
-
-    @*Need to add a new destination?*@
     @Html.ActionLink("Add a new destination!", "Create", "Destinations")
 
-    @*FLIP THOSE LAST TWO if it doesn't work. IT WORKS.*@
 </h4>

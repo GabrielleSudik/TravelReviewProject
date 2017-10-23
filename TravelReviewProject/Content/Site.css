@@ -53,13 +53,13 @@ a.navbar /*eep how to i name the attributes of links in the navbar? tried severa
 }
 
 .sampleReview, .sampleReviewPale{
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     margin: 0px;
 }
 
 #Machu {
     float: left;
-    padding: 0px ; /*play with numbers to get it flush with top and left, margin on rt and bottom*/
+    padding: 0px ; 
     margin: 0px 20px 0px 0px;
 }
 
@@ -140,13 +140,11 @@ textarea {
 .btn-primary {
     background-color: #C35800; /*darker orange*/
     color: white;
-    /*how can i change the hover color?*/
 }
 
 .btn-default {
     background-color: #512500; /*brown*/
     color: white;
-    /*how can i change the hover color?*/
 }
 
 footer {

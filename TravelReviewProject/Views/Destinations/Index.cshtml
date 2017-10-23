@@ -7,8 +7,9 @@
 <h2>Places We've Been</h2>
 
 <h4>Sort by destination, country or language!</h4>
+
 <table class="table sortable">
-    <tr class="tableHeading"> @*add a class to style heading*@
+    <tr class="tableHeading"> @*class to style heading*@
         <th>
             @Html.DisplayNameFor(model => model.City)
         </th>
@@ -22,7 +23,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr class="tableBody">  @*add class to style body of table*@
+    <tr class="tableBody">  @*class to style body of table*@
         <td>
             @Html.DisplayFor(modelItem => item.City)
         </td>
@@ -35,7 +36,6 @@
         <td>
             @Html.ActionLink("Details", "Details", new { id = item.ID }) |
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
