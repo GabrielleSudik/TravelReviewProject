@@ -8,15 +8,26 @@
     color: #512500; /*rgb(117, 53, 0);*/ /*brown*/
 }
 
+.brownTitle{
+    color: #512500;
+    text-align: center;
+}
+
 .navbar{
     background-color: #512500;
     color: #ff7400;
+    font-size: 120%
 }
 
 .navbar-toggle{
     /*might need something here, maybe just copy .navbar*/
         background-color: #512500;
     color: #ff7400;
+}
+
+a.navbar /*eep how to i name the attributes of links in the navbar? tried several ways, none worked*/
+{
+    color: white;
 }
 
 .jumbotron{
@@ -36,9 +47,43 @@
     padding-right: 15px;
 }
 
+.threeChoices{
+    text-align: center;
+}
+
+#Machu{
+        float: left;
+    padding: 2px 2px 2px 2px; /*play with numbers to get it flush with top and left, margin on rt and bottom*/
+    margin: 2px;
+}
+
+#Portland{
+        float: right;
+    padding: 20px 20px 20px 20px;
+    margin: 20px;
+}
+
+#SriFood{
+        float: left;
+    padding: 20px 20px 20px 20px;
+    margin: 20px;
+}
+
 .table{
     background-color: #512500;
     color: white;
+}
+
+.tableHeading{
+    font-size: 130%;
+}
+
+.tableBody{
+    background-color: #CD5D00; /*dark orange*/
+}
+
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    content: " \25B4\25BE" 
 }
 
 h1, h2, h3, h4 {
@@ -51,6 +96,10 @@ h1, h2, h3, h4 {
     color: white;
     font-family: 'Special Elite', cursive;
     /*need to make hyperlink text more readable*/
+}
+
+a{
+    color: white;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -79,6 +128,10 @@ textarea {
         background-color: #512500;
     color: white;
     /*how can i change the hover color?*/
+}
+
+footer{
+    font-size: 120%;
 }
 
 

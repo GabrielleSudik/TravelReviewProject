@@ -8,7 +8,7 @@
 
 <h4>Sort by destination, country or language!</h4>
 <table class="table sortable">
-    <tr>
+    <tr class="tableHeading"> @*add a class to style heading*@
         <th>
             @Html.DisplayNameFor(model => model.City)
         </th>
@@ -18,11 +18,11 @@
         <th>
             @Html.DisplayNameFor(model => model.Language)
         </th>
-        <th></th>
+        @*<th></th>*@ @*TH removed because not needed*@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="tableBody">  @*add class to style body of table*@
         <td>
             @Html.DisplayFor(modelItem => item.City)
         </td>

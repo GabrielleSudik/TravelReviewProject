@@ -11,7 +11,7 @@
 
 @*<table class="table">*@
     <table class="table sortable">
-        <tr>
+        <tr class="tableHeading"> @*add class to style table heading*@
 
             <th>
                 @Html.DisplayNameFor(model => model.Destination.City)
@@ -26,12 +26,12 @@
                 @Html.DisplayNameFor(model => model.ReviewTitle)
             </th>*@
 
-            <th></th>
+            @*<th></th>*@ @*this TH removed because it gave up/down buttons, not needed*@
         </tr>
 
         @foreach (var item in Model)
         {
-            <tr>
+            <tr class="tableBody"> @*add class to style body of table*@
 
                 <td>
                     @Html.DisplayFor(modelItem => item.Destination.City)

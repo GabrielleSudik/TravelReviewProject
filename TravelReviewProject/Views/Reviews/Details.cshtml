@@ -4,25 +4,27 @@
     ViewBag.Title = "Details";
 }
 
-<h2>What Others Have To Say</h2>
-
+@*<h2>What Others Have To Say About:</h2>*@  @*TRY ADDING INFO AT TOP HERE*@
+<h2>@Html.DisplayFor(model => model.Destination.City)</h2> @*that's the new part*@
+<h2>"@Html.DisplayFor(model => model.ReviewTitle)"</h2>
+<h2>@Html.DisplayFor(model => model.Rating.UserRating)</h2>
 <div>
-    <h4>Review</h4>
+    @*<h4>Review</h4>*@
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Destination.City)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Destination.City)
-        </dd>
+        </dd>*@
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Rating.UserRating)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Rating.UserRating)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.ReviewTitle)

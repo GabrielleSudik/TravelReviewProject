@@ -4,11 +4,9 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Destination Details</h2>
 
 <div>
-    <h4>Destination</h4>
-    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.City)
@@ -35,6 +33,15 @@
         </dd>
 
     </dl>
+    <hr />
+    <h3>Future versions of this page could include:</h3>
+    <ul>
+        <li>Capital</li>
+        <li>Local currency</li>
+        <li>Currency exchange rates</li>
+        <li>Population facts</li>
+        <li>Links to maps</li>
+    </ul>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
